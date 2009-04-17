@@ -1,0 +1,13 @@
+<h1>Edit info: <%= @info.judul%></h1>
+	<%= form_tag :action => 'update', :id => @info %>
+	<p><label for="info_judul"> Judul </label><br>
+		<%= text_field 'info','judul'%></p>
+	<p><label for="info_isi"> Isi </label><br>
+		<%= text_area 'info','isi'%></p>
+	<p><label for="info_tanggal"> Tanggal </label><br>
+		<%= datetime_select 'info','tanggal' %></p>
+	<p><label for="info_author"> Author </label><br>
+		<%= text_field 'info','author'%></p>
+		
+		<%= submit_tag "Simpan Perubahan"%>
+<%= form_tag%>

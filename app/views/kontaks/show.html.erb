@@ -1,0 +1,23 @@
+<p>
+  <b>Nama:</b>
+  <%=h @kontak.nama %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @kontak.email %>
+</p>
+
+<p>
+  <b>Pesan:</b>
+  <%=h @kontak.pesan %>
+</p>
+
+<p>
+  <b>Tanggal:</b>
+  <%=h @kontak.tanggal.strftime("%B %d, %Y at %I:%M %p") %>
+</p>
+
+
+<%= link_to 'Edit', edit_kontak_path(@kontak) %> |
+<%= link_to 'Back', kontaks_path %>

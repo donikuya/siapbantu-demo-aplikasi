@@ -1,0 +1,13 @@
+<%= form_tag :action => 'create'%>
+	<%= error_messages_for :info%>
+	<p><label for="info_judul"> Judul </label><br>
+		<%= text_field 'info','judul'%></p>
+	<p><label for="info_isi"> Isi </label><br>
+		<%= text_area 'info','isi'%></p>
+	<p><label for="info_tanggal"> Tanggal </label><br>
+		<%= datetime_select 'info','tanggal' %></p>
+	<p><label for="info_author"> Author </label><br>
+		<%= text_field 'info','author'%></p>
+		
+		<%= submit_tag "Buat"%>
+<%= form_tag%>

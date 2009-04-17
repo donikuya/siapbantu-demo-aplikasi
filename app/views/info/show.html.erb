@@ -1,0 +1,30 @@
+
+	<h4><%= @info.judul %></h4>
+	<p align=justify><%= @info.isi %></p>
+	<div class = "dateline">
+	<%= @info.tanggal.strftime("%B %d, %Y at %I:%M %p") %><br>
+	<%= @info.author %>
+	</div>
+	
+	<hr>
+	<p>Komentar:<br/>
+			<ul>
+				<% @info.komentars.each do |komentar| %>
+					<li>
+						nama  :<%= h komentar.nama %><br>
+						email :<%= h komentar.email %><br>
+						<p align = justify><%= h komentar.komentar %></p>
+						<div class = "dateline">
+						Posted on <%= komentar.created_at.strftime("%B %d, %Y at %I:%M %p") %><br><br>
+						</div>
+					</li>
+				<% end %>
+			</ul>
+	
+	<% form_for(:komentar, :url => info_komentars_path(@info)) do |f| %>
+		<p>
+		nama :<%= f.text_field :nama %><br>
+		email :<%= f.text_field :email %><br>
+		<%= f.text_area :komentar %></p>
+		<%= f.submit "kirim" %>
+	<%end %>

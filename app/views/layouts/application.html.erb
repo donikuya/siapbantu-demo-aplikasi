@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;?
+charset=iso-8859-1" />
+<meta http-equiv="Content-Language" content="en-us" />
+<title>www.siapbantu.com</title>
+<%= stylesheet_link_tag "style" %>
+<%= javascript_include_tag :defaults %>
+
+</head>
+<body id="rails-list">
+						
+<div id="container">
+<div id="header">
+	
+<h1>SiapBantu</h1>
+<h3>Siap Membantu Anda Dalam Masalah Skripsi Anda</h3>
+		<ul id="kategori">
+							<li><a href=http://localhost:3000/home>Home</a></li>
+							<li><a href=http://localhost:3000/layanan>Layanan</a></li>
+							<li><a href=http://localhost:3000/info>Info</a></li>
+							<li><a href=http://localhost:3000/feedback>Feedback</a></li>
+							<li><a href=http://localhost:3000/kontaks>Kontak</a></li>
+						
+						</ul>
+</div>
+<div id="content">
+<%= flash[:peringatan]%>
+<%= yield -%>
+</div>
+<div id="sidebar"></div>
+</div>
+</body>
+</html>

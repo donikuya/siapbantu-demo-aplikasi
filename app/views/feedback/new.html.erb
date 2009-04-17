@@ -1,0 +1,12 @@
+<%= form_tag :action => 'create'%>
+	<%= error_messages_for :feedback%>
+	<p><label for="feedback_nama"> Nama </label><br>
+		<%= text_field 'feedback','nama'%></p>
+	<p><label for="feedback_email"> Email </label><br>
+		<%= text_field 'feedback','email'%></p>
+	<p><label for="feedback_saran"> Saran </label><br>
+		<%= text_area 'feedback','saran' %></p>
+	
+		
+		<%= submit_tag "Kirim Saran"%>
+<%= form_tag%>

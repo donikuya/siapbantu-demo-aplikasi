@@ -1,0 +1,12 @@
+<h1>Feedback</h1>
+
+<% if @feedbacks.blank? %>
+	<p> Tidak ada saran dari untuk saat ini. </p>
+<% else %>
+	<p> Tips dan Info dari kami : </p>
+	<ul>
+		<% @feedbacks.each do |doni| %>
+			<li><%= link_to doni.nama,{:action => 'show', :id => doni.id} -%></li>
+		<% end %>
+	</ul>
+<% end %>

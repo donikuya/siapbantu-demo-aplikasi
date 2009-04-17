@@ -1,0 +1,29 @@
+
+
+<h1>Listing kontaks</h1>
+
+<table>
+  <tr>
+    <th>Nama</th>
+    <th>Email</th>
+    <th>Pesan</th>
+    <th>Tanggal</th>
+  </tr>
+
+<% for kontak in @kontaks %>
+  <tr>
+    <td><%=h kontak.nama %></td>
+    <td><%=h kontak.email %></td>
+    <td><%=h kontak.pesan %></td>
+    <td><%=h kontak.tanggal.strftime("%B %d, %Y at %I:%M %p") %></td>
+    <td><%= link_to 'Show', kontak %></td>
+    <td><%= link_to 'Edit', edit_kontak_path(kontak) %></td>
+    <td><%= link_to 'Destroy', kontak, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New kontak', new_kontak_path %>
+

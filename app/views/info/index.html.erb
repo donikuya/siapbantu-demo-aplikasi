@@ -1,0 +1,10 @@
+<% if @infos.blank? %>
+	<p> Tidak ada info untuk saat ini. </p>
+<% else %>
+	<p> Tips dan Info dari kami : </p>
+	<ul>
+		<% @infos.each do |doni| %>
+			<li><%= link_to doni.judul,{:action => 'show', :id => doni.id} -%></li>
+		<% end %>
+	</ul>
+<% end %>
